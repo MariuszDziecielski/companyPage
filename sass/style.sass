@@ -26,7 +26,7 @@ $fonts: 'Candal', sans-serif
     width: $width
 =bg($image, $position: center, $size: cover, $repeat: repeat)
     background: url("https://#{$image}") $repeat $position/$size
-// ---      
+//     
 *
     box-sizing: border-box
 body
@@ -41,8 +41,8 @@ body
 /* GRIDS */
 .row::before,
 .row::after,
-nav::before,
-nav::after
+.navbar-default::before,
+.navbar-default::after
     content: ""
     display: table
     clear: both
@@ -50,7 +50,6 @@ nav::after
     width: 100%
     min-height: 1px
 /* HEADER */
-nav,
 .icon-btn,
 footer .container
     background-color: $color
@@ -58,21 +57,40 @@ img
     max-width: 100%
     height: auto
 header 
-    img  
-        +pos-rel(6px)      
-        width: 55px
-    ul
-        font-size: 0
-        list-style-type: none
-        padding-left: 0        
-        li     
-            font-size: 15px  
-            a 
-                line-height: 70px
-                padding: 0 15px
-                display: block
-                text-decoration: none          
-header a,
+    .navbar-default
+        background-color: $color
+        margin-bottom: 0
+        border: none
+        padding: 0 20px 
+        .container
+            .navbar-header
+                .navbar-toggle
+                    margin-right: 25px
+                    margin-top: 17px
+                    background-color: inherit
+                    border: none
+                    .icon-bar
+                        background-color: $colorWhite
+                .navbar-brand
+                    height: 70px
+                    img  
+                        +pos-rel(-8px) 
+                        width: 55px
+            .navbar-collapse
+                border: none
+                ul
+                    font-size: 0
+                    list-style-type: none
+                    padding-left: 0        
+                    li     
+                        font-size: 15px  
+                        a 
+                            line-height: 70px
+                            padding: 0 15px
+                            display: block
+                            text-decoration: none    
+                            text-transform: uppercase
+                            color: $colorWhite
 .slogan,
 .benefits h2,
 .featured_works h2,
@@ -80,7 +98,6 @@ header a,
 .statistic p,
 footer h2         
     text-transform: uppercase
-header a,        
 .icon-btn,
 .slogan,
 .job,
@@ -99,10 +116,10 @@ header a,
             width: auto
             text-align: left
             padding: 0px 32px 0 30px
-            font-size: 11px
             background-color: $colorRgba
             h1 
                 font-weight: normal
+                font-size: 1.5em
                 span 
                     font-weight: bold
 /* ICONS */
@@ -284,17 +301,22 @@ footer p,
     /* HEADER */
     header 
         height: 70px
-        nav 
-            padding: 0 60px 
-            img  
-                float: left 
-            ul 
-                float: right  
-                li     
-                    display: inline-block 
-                    a
-                        &:hover 
-                            color: $colorBlue                    
+        .navbar-default 
+            padding: 0 50px 
+            .container
+                .navbar-header
+                    .navbar-brand
+                        img  
+                            float: left 
+                .navbar-collapse
+                    padding: 0
+                    ul 
+                        float: right  
+                        li     
+                            display: inline-block 
+                            a
+                                &:hover 
+                                    color: $colorBlue             
     /* HERO */
     .hero 
         .container 
@@ -303,8 +325,7 @@ footer p,
             .slogan 
                 float: right
                 width: 430px
-                padding-left: 30px
-                font-size: 12px 
+                padding-left: 30px  
     /* ICONS */
     .icon-btn 
         cursor: pointer 
@@ -440,14 +461,15 @@ footer p,
             width: 100% / 12 * $i   
     /* HEADER */
     header
-        nav 
+        .navbar-default 
             padding: 0 130px                                    
     /* HERO */
     .hero 
         .container 
             .slogan 
                 width: 465px
-                font-size: 16px 
+                h1
+                    font-size: 2em
     /* FEATURED WORKS */
     .featured_works 
         h2 
@@ -494,14 +516,15 @@ footer p,
             width: 100% / 12 * $i  
     /* HEADER */                                       
     header
-        nav 
-            padding: 0 140px 
+        .navbar-default 
+            padding: 0 120px 
+            max-width: 1200px
+            margin: 0 auto      
     /* HERO */
     .hero 
         .container
             .slogan 
                 width: 535px
-                font-size: 19px 
     /* BENEFITS */
     .benefits
         .container
