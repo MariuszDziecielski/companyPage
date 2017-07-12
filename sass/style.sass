@@ -2,12 +2,13 @@
 @import url('https://fonts.googleapis.com/css?family=Bevan')
 @import url('https://fonts.googleapis.com/css?family=Candal')
 // Variables 
-$color: #313332
-$colorWhite: #fff
-$colorBlue: #00c7e8
+$blackColor: #313332
+$whiteColor: #fff
+$blueColor: #00c7e8
+$colorTrans: rgba(0, 0, 0, 0.5)
 $transition: 1.4s cubic-bezier(1,-0.25, 0, 1.04)
-$colorRgba: rgba(0, 0, 0, 0.5)
-$fonts: 'Candal', sans-serif
+$primFont: 'Open Sans', sans-serif
+$secFont: 'Candal', sans-serif
 // Mixins 
 =pos-abs($top: 0, $left: auto, $right: auto)
     position: absolute
@@ -26,13 +27,12 @@ $fonts: 'Candal', sans-serif
     width: $width
 =bg($image, $position: center, $size: cover, $repeat: repeat)
     background: url("https://#{$image}") $repeat $position/$size
-//     
 *
     box-sizing: border-box
 body
     margin: 0
     padding: 0
-    font-family: 'Open Sans', sans-serif
+    font-family: $primFont
 /* CONTAINER */
 .container
     width: 100%
@@ -52,25 +52,24 @@ body
 /* HEADER */
 .icon-btn,
 footer .container
-    background-color: $color
+    background-color: $blackColor
 img
     max-width: 100%
     height: auto
 header 
     .navbar-default
-        background-color: $color
+        background-color: $blackColor
         margin-bottom: 0
         border: none
         padding: 0 20px 
         .container
             .navbar-header
-                .navbar-toggle
-                    margin-right: 25px
-                    margin-top: 17px
+                .navbar-toggle   
+                    margin: 17px 25px 0 0
                     background-color: inherit
                     border: none
                     .icon-bar
-                        background-color: $colorWhite
+                        background-color: $whiteColor
                 .navbar-brand
                     height: 70px
                     img  
@@ -90,7 +89,7 @@ header
                             display: block
                             text-decoration: none    
                             text-transform: uppercase
-                            color: $colorWhite
+                            color: $whiteColor
 .slogan,
 .benefits h2,
 .featured_works h2,
@@ -103,7 +102,7 @@ footer h2
 .job,
 .promotion h2,
 .promotion p 
-    color: $colorWhite
+    color: $whiteColor
 /* HERO */        
 .hero 
     .container       
@@ -116,10 +115,9 @@ footer h2
             width: auto
             text-align: left
             padding: 0px 32px 0 30px
-            background-color: $colorRgba
+            background-color: $colorTrans
             h1 
-                font-weight: normal
-                font-size: 1.5em
+                font: normal 1.5em $primFont
                 span 
                     font-weight: bold
 /* ICONS */
@@ -135,8 +133,7 @@ footer h2
         margin-top: 43px
     h2 
         font-size: 18px
-        margin-top: 25px
-        margin-bottom: 7px
+        margin: 25px 0 7px
     p 
         font-size: 13px
         margin: 0 25px 35px  
@@ -144,17 +141,15 @@ footer h2
 .featured_works h2,
 .job + p,
 .statistic span 
-    color: $color
+    color: $blackColor
 .benefits p,        
 .featured_works p 
     color: #a9a9a9
 /* FEATURED WORKS */
 .featured_works 
     h2 
-        font-size: 29px
-        margin-top: 0px
-        margin-bottom: 16px
-        font-family: $fonts
+        margin: 0 0 16px
+        font: bold 29px $secFont
     p 
         font-size: 13px 
         margin: 0 15px
@@ -172,14 +167,13 @@ footer h2
         display: block       
         +dimensions() 
         .icon-btn
-            font-size: 14px         
             +dimensions(20px, 20px)
-            line-height: 20px    
+            font: normal 14px/20px $primFont
             +pos-rel(50%)         
             transform: translateY(-50%)
             margin: 0 16px
             color: #000
-            background-color: $colorWhite
+            background-color: $whiteColor
             border-radius: 4px
             .fa          
                 +pos-rel(auto, -2px)               
@@ -192,9 +186,8 @@ footer h2
     .container
         .col-x      
             +dimensions(250px)        
-            position: relative    
-            margin: 10px auto
-            margin-bottom: 39px
+            position: relative
+            margin: 10px auto 39px
             &:nth-child(1) 
                 .person     
                     +bg('images.pexels.com/photos/175977/pexels-photo-175977.jpeg?h=350&auto=compress&cs=tinysrgb')
@@ -225,9 +218,8 @@ footer h2
         background-color: #bfbfbf
         padding: 32px 0
         h2
-            font-size: 30px
+            font: bold 30px $secFont
             margin-bottom: 15px
-            font-family: $fonts
         p
             font-size: 13px
             margin: 10px 15px
@@ -247,17 +239,16 @@ footer h2
     .container 
         padding: 29px 0 0
         p 
-            color: $colorBlue
+            color: $blueColor
             +font-weight-size(13px)        
             line-height: 25px
             margin-bottom: 39px
             span 
-                font-size: 44px
-                font-family: 'Bevan', cursive
+                font: bold 44px 'Bevan', cursive
 /* FOOTER */
 footer 
     .container 
-        color: azure
+        color: #f0ffff
         font-size: 13px
         text-align: center
         .row
@@ -280,11 +271,10 @@ footer
                         margin-bottom: 10px
         .social 
             .icon-btn 
-                font-size: 21px
-                +dimensions(35px, 35px)      
-                line-height: 35px
+                +dimensions(35px, 35px) 
+                font: normal 21px/35px $primFont
                 margin: 10px
-                background-color: $colorBlue
+                background-color: $blueColor
                 border-radius: 1px               
 footer p,    
 .get_in .row .col-x 
@@ -316,7 +306,7 @@ footer p,
                             display: inline-block 
                             a
                                 &:hover 
-                                    color: $colorBlue             
+                                    color: $blueColor             
     /* HERO */
     .hero 
         .container 
@@ -340,9 +330,9 @@ footer p,
                     margin-bottom: 0
                     &:hover 
                         .icon-btn 
-                            background-color: $colorBlue
+                            background-color: $blueColor
                         h2 
-                            color: $colorBlue
+                            color: $blueColor
     /* FEATURED WORKS */
     .featured_works 
         h2 
@@ -365,7 +355,7 @@ footer p,
         height: 100%
     .layer,
     .team .col-s-6:hover .job 
-        background-color: $colorRgba
+        background-color: $colorTrans
     .gallery .col-s-2:hover .layer,
     .gallery .col-s-4:hover .layer 
         height: 100%
@@ -403,8 +393,7 @@ footer p,
                 font-size: 30px
             p                                      
                 font-size: 13px
-                margin: 0
-                margin-right: 15px               
+                margin: 0 15px 0 0     
             .col-s-4 
                 p 
                     margin-top: 0                   
@@ -434,7 +423,7 @@ footer p,
                         +pos-abs(12px)                
                         margin-left: 10px
                         width: 50px
-                        border-bottom: 2px solid $colorWhite
+                        border-bottom: 2px solid $whiteColor
                         border-radius: 4px       
                 p 
                     margin-right: 30px 
@@ -446,9 +435,8 @@ footer p,
                             width: 70px
                 .social 
                     .icon-btn 
-                        font-size: 17px
-                        +dimensions(25px, 25px)             
-                        line-height: 25px
+                        +dimensions(25px, 25px)  
+                        font: normal 17px/25px $primFont
                         margin: 2px  
                 .col-s-12
                     &:only-of-type 
