@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700')
 @import url('https://fonts.googleapis.com/css?family=Bevan')
 @import url('https://fonts.googleapis.com/css?family=Candal')
-// Variables 
 $blackColor: #313332
 $whiteColor: #fff
 $blueColor: #00c7e8
@@ -9,19 +8,18 @@ $colorTrans: rgba(0, 0, 0, 0.5)
 $transition: 1.4s cubic-bezier(1,-0.25, 0, 1.04)
 $primFont: 'Open Sans', sans-serif
 $secFont: 'Candal', sans-serif
-// Mixins 
 =pos-abs($top: 0, $left: auto, $right: auto)
     position: absolute
     top: $top
     left: $left
-    right: $right  
+    right: $right
 =pos-rel($top: auto, $left: auto)
     position: relative
     top: $top
-    left: $left   
-=font-weight-size($font-size: 18px, $font-weight: bold)  
+    left: $left
+=font-weight-size($font-size: 18px, $font-weight: bold)
     font-size: $font-size
-    font-weight: $font-weight 
+    font-weight: $font-weight
 =dimensions($height: 100%, $width: 100%)
     height: $height
     width: $width
@@ -56,15 +54,15 @@ footer .container
 img
     max-width: 100%
     height: auto
-header 
+header
     .navbar-default
         background-color: $blackColor
         margin-bottom: 0
         border: none
-        padding: 0 20px 
+        padding: 0 20px
         .container
             .navbar-header
-                .navbar-toggle   
+                .navbar-toggle
                     margin: 17px 25px 0 0
                     background-color: inherit
                     border: none
@@ -72,22 +70,22 @@ header
                         background-color: $whiteColor
                 .navbar-brand
                     height: 70px
-                    img  
-                        +pos-rel(-8px) 
+                    img
+                        +pos-rel(-8px)
                         width: 55px
             .navbar-collapse
                 border: none
                 ul
                     font-size: 0
                     list-style-type: none
-                    padding-left: 0        
-                    li     
-                        font-size: 15px  
-                        a 
+                    padding-left: 0
+                    li
+                        font-size: 15px
+                        a
                             line-height: 70px
                             padding: 0 15px
                             display: block
-                            text-decoration: none    
+                            text-decoration: none
                             text-transform: uppercase
                             color: $whiteColor
 .slogan,
@@ -95,126 +93,126 @@ header
 .featured_works h2,
 .promotion h2,
 .statistic p,
-footer h2         
+footer h2
     text-transform: uppercase
 .icon-btn,
 .slogan,
 .job,
 .promotion h2,
-.promotion p 
+.promotion p
     color: $whiteColor
-/* HERO */        
-.hero 
-    .container       
+/* HERO */
+.hero
+    .container
         +bg('unsplash.it/1200/400?image=180')
-        position: relative   
+        position: relative
         height: 340px
-        .slogan     
-            +pos-abs(45%, auto, 0)           
-            transform: translateY(-45%) 
+        .slogan
+            +pos-abs(45%, auto, 0)
+            transform: translateY(-45%)
             width: auto
             text-align: left
             padding: 0px 32px 0 30px
             background-color: $colorTrans
-            h1 
+            h1
                 font: normal 1.5em $primFont
-                span 
+                span
                     font-weight: bold
 /* ICONS */
 .icon-btn
-    +dimensions(100px, 100px)  
+    +dimensions(100px, 100px)
     border: 0
     border-radius: 14px
     font-size: 40px
     margin: 0 auto
 /* BENEFITS */
-.benefits 
-    .container 
+.benefits
+    .container
         margin-top: 43px
-    h2 
+    h2
         font-size: 18px
         margin: 25px 0 7px
-    p 
+    p
         font-size: 13px
-        margin: 0 25px 35px  
-.benefits h2,        
+        margin: 0 25px 35px
+.benefits h2,
 .featured_works h2,
 .job + p,
-.statistic span 
+.statistic span
     color: $blackColor
-.benefits p,        
-.featured_works p 
+.benefits p,
+.featured_works p
     color: #a9a9a9
 /* FEATURED WORKS */
-.featured_works 
-    h2 
+.featured_works
+    h2
         margin: 0 0 16px
         font: bold 29px $secFont
-    p 
-        font-size: 13px 
+    p
+        font-size: 13px
         margin: 0 15px
 /* GALLERY */
-.hidden 
+.hidden
     display: none
-.gallery 
-    .container 
+.gallery
+    .container
         margin: 39px auto
         line-height: 0
-    .col-x      
-        position: relative       
-    .layer  
-        +pos-abs(0, 0)      
-        display: block       
-        +dimensions() 
+    .col-x
+        position: relative
+    .layer
+        +pos-abs(0, 0)
+        display: block
+        +dimensions()
         .icon-btn
             +dimensions(20px, 20px)
             font: normal 14px/20px $primFont
-            +pos-rel(50%)         
+            +pos-rel(50%)
             transform: translateY(-50%)
             margin: 0 16px
             color: #000
             background-color: $whiteColor
             border-radius: 4px
-            .fa          
-                +pos-rel(auto, -2px)               
-.gallery .container,    
+            .fa
+                +pos-rel(auto, -2px)
+.gallery .container,
 .layer,
-.job 
+.job
     overflow: hidden
 /* TEAM */
 .team
     .container
-        .col-x      
-            +dimensions(250px)        
+        .col-x
+            +dimensions(250px)
             position: relative
             margin: 10px auto 39px
-            &:nth-child(1) 
-                .person     
-                    +bg('images.pexels.com/photos/175977/pexels-photo-175977.jpeg?h=350&auto=compress&cs=tinysrgb')
-            &:nth-child(2) 
-                .person                  
+            &:nth-child(1)
+                .person
+                    +bg('images.pexels.com/photos/428339/pexels-photo-428339.jpeg?h=350&auto=compress&cs=tinysrgb')
+            &:nth-child(2)
+                .person
                     +bg('images.pexels.com/photos/51969/model-female-girl-beautiful-51969.jpeg?h=350&auto=compress&cs=tinysrgb')
-            &:nth-child(3) 
-                .person 
+            &:nth-child(3)
+                .person
                     +bg('images.pexels.com/photos/6980/summer-cute-hipster-beauty.jpg?h=350&auto=compress&cs=tinysrgb', 50% 0%)
-            &:nth-child(4) 
-                .person 
+            &:nth-child(4)
+                .person
                     +bg('images.pexels.com/photos/91227/pexels-photo-91227.jpeg?h=350&auto=compress&cs=tinysrgb')
-            .person 
-                +dimensions(200px, 200px)           
+            .person
+                +dimensions(200px, 200px)
                 border-radius: 50%
                 margin: 0 auto
-            .job 
-                +dimensions(200px, 200px)     
-                +pos-abs(30%, 50%)          
+            .job
+                +dimensions(200px, 200px)
+                +pos-abs(30%, 50%)
                 transform: translateX(-50%)
                 line-height: 200px
-            .job + p  
+            .job + p
                 +font-weight-size()
-                margin-top: 21px    
+                margin-top: 21px
 /* PROMOTION */
-.promotion 
-    .container 
+.promotion
+    .container
         background-color: #bfbfbf
         padding: 32px 0
         h2
@@ -232,343 +230,343 @@ footer h2
                 margin-top: 19px
                 font-style: italic
 .promotion h2,
-.promotion p 
+.promotion p
     text-align: center
 /* STATISTIC */
-.statistic 
-    .container 
+.statistic
+    .container
         padding: 29px 0 0
-        p 
+        p
             color: $blueColor
-            +font-weight-size(13px)        
+            +font-weight-size(13px)
             line-height: 25px
             margin-bottom: 39px
-            span 
+            span
                 font: bold 44px 'Bevan', cursive
 /* FOOTER */
-footer 
-    .container 
+footer
+    .container
         color: #f0ffff
         font-size: 13px
         text-align: center
         .row
-            &:nth-child(1) 
-                padding: 22px 15px 
+            &:nth-child(1)
+                padding: 22px 15px
             .col-x
-                &:only-of-type 
+                &:only-of-type
                     height: 50px
                     background-color: #252726
                     line-height: 50px
-                    text-align: center              
-        h2         
-            position: relative        
-        .get_in 
+                    text-align: center
+        h2
+            position: relative
+        .get_in
             padding: 2px 0 1px
-            .row 
+            .row
                 margin-bottom: 20px
                 div
-                    &:first-child 
+                    &:first-child
                         margin-bottom: 10px
-        .social 
-            .icon-btn 
-                +dimensions(35px, 35px) 
+        .social
+            .icon-btn
+                +dimensions(35px, 35px)
                 font: normal 21px/35px $primFont
                 margin: 10px
                 background-color: $blueColor
-                border-radius: 1px               
-footer p,    
-.get_in .row .col-x 
+                border-radius: 1px
+footer p,
+.get_in .row .col-x
     color: #ccc
 /* Media queries */
 /* For tablets: */
-@media (min-width: 768px) 
+@media (min-width: 768px)
     /* GRIDS */
-    [class*="col-"] 
-        float: left  
+    [class*="col-"]
+        float: left
     @for $i from 1 through 12
         .col-s-#{$i}
-            width: 100% / 12 * $i  
+            width: 100% / 12 * $i
     /* HEADER */
-    header 
+    header
         height: 70px
-        .navbar-default 
-            padding: 0 50px 
+        .navbar-default
+            padding: 0 50px
             .container
                 .navbar-header
                     .navbar-brand
-                        img  
-                            float: left 
+                        img
+                            float: left
                 .navbar-collapse
                     padding: 0
-                    ul 
-                        float: right  
-                        li     
-                            display: inline-block 
+                    ul
+                        float: right
+                        li
+                            display: inline-block
                             a
-                                &:hover 
-                                    color: $blueColor             
+                                &:hover
+                                    color: $blueColor
     /* HERO */
-    .hero 
-        .container 
+    .hero
+        .container
             height: 375px
-            margin: 0 auto 
-            .slogan 
+            margin: 0 auto
+            .slogan
                 float: right
                 width: 430px
-                padding-left: 30px  
+                padding-left: 30px
     /* ICONS */
-    .icon-btn 
-        cursor: pointer 
+    .icon-btn
+        cursor: pointer
     /* BENEFITS */
-    .benefits 
-        .container 
+    .benefits
+        .container
             margin-top: 83px
-            .row 
+            .row
                 width: 680px
                 margin: 0 auto
-                .col-s-4 
+                .col-s-4
                     margin-bottom: 0
-                    &:hover 
-                        .icon-btn 
+                    &:hover
+                        .icon-btn
                             background-color: $blueColor
-                        h2 
+                        h2
                             color: $blueColor
     /* FEATURED WORKS */
-    .featured_works 
-        h2 
+    .featured_works
+        h2
             font-size: 32px
             margin-top: 60px
-        p 
-            font-size: 14px 
+        p
+            font-size: 14px
             margin: 0 50px
     /* GALLERY */
-    .gallery 
-        .container 
-            margin-top: 48px      
-            .layer 
+    .gallery
+        .container
+            margin-top: 48px
+            .layer
                 height: 0
                 transition: $transition
-                .icon-btn 
-                    margin: 0 10px                    
+                .icon-btn
+                    margin: 0 10px
     .col-s-2,
-    .col-s-4 
+    .col-s-4
         height: 100%
     .layer,
-    .team .col-s-6:hover .job 
+    .team .col-s-6:hover .job
         background-color: $colorTrans
     .gallery .col-s-2:hover .layer,
-    .gallery .col-s-4:hover .layer 
+    .gallery .col-s-4:hover .layer
         height: 100%
     /* TEAM */
-    .team 
-        .container 
+    .team
+        .container
             width: 100%
-            margin: 55px auto 19px  
-            .col-s-6 
-                width: 50% 
-                cursor: pointer                                               
+            margin: 55px auto 19px
+            .col-s-6
+                width: 50%
+                cursor: pointer
                 margin-bottom: 30px
-                .job     
-                    +pos-abs(0, 50%)               
+                .job
+                    +pos-abs(0, 50%)
                     opacity: 0
-                    transition: $transition 
+                    transition: $transition
                     border-radius: 50%
-                &:hover 
-                    .job 
+                &:hover
+                    .job
                         opacity: 1
     /* PROMOTION */
-    .promotion 
-        .container 
+    .promotion
+        .container
             height: auto
             padding: 15px 10px
-            .col-s-5                  
-                position: relative                 
+            .col-s-5
+                position: relative
                 overflow: hidden
                 height: 320px
-                .picture 
+                .picture
                     height: 280px
-                    float: left          
-                    +pos-abs(28px, 0)                 
-            h2 
+                    float: left
+                    +pos-abs(28px, 0)
+            h2
                 font-size: 30px
-            p                                      
+            p
                 font-size: 13px
-                margin: 0 15px 0 0     
-            .col-s-4 
-                p 
-                    margin-top: 0                   
+                margin: 0 15px 0 0
+            .col-s-4
+                p
+                    margin-top: 0
     .promotion h2,
-    .promotion p 
+    .promotion p
         text-align: left
     /* STATISTIC */
-    .statistic 
-        .container 
+    .statistic
+        .container
             height: 190px
             padding: 55px 15px
-            p 
+            p
                 font-size: 14px
-                margin-bottom: 0  
-                span 
+                margin-bottom: 0
+                span
                     font-size: 46px
     /* FOOTER */
-    footer 
-        .container 
-            text-align: left 
+    footer
+        .container
+            text-align: left
             .row
-                &:nth-child(1) 
-                    padding: 22px 0px 22px 36px 
+                &:nth-child(1)
+                    padding: 22px 0px 22px 36px
                 h2
-                    &:after                        
-                        content: ""      
-                        +pos-abs(12px)                
+                    &:after
+                        content: ""
+                        +pos-abs(12px)
                         margin-left: 10px
                         width: 50px
                         border-bottom: 2px solid $whiteColor
-                        border-radius: 4px       
-                p 
-                    margin-right: 30px 
+                        border-radius: 4px
+                p
+                    margin-right: 30px
                 .get_in
                     padding: 0
-                    .row 
-                        .col-s-4 
+                    .row
+                        .col-s-4
                             margin-bottom: 0
                             width: 70px
-                .social 
-                    .icon-btn 
-                        +dimensions(25px, 25px)  
+                .social
+                    .icon-btn
+                        +dimensions(25px, 25px)
                         font: normal 17px/25px $primFont
-                        margin: 2px  
+                        margin: 2px
                 .col-s-12
-                    &:only-of-type 
-                        line-height: 20px     
+                    &:only-of-type
+                        line-height: 20px
 /* For computers: */
-@media (min-width: 992px) 
+@media (min-width: 992px)
     /* GRIDS */
     @for $i from 1 through 12
         .col-m-#{$i}
-            width: 100% / 12 * $i   
+            width: 100% / 12 * $i
     /* HEADER */
     header
-        .navbar-default 
-            padding: 0 130px                                    
+        .navbar-default
+            padding: 0 130px
     /* HERO */
-    .hero 
-        .container 
-            .slogan 
+    .hero
+        .container
+            .slogan
                 width: 465px
                 h1
                     font-size: 2em
     /* FEATURED WORKS */
-    .featured_works 
-        h2 
+    .featured_works
+        h2
             font-size: 34px
-        p 
+        p
             margin: 0 170px
     /* GALLERY */
-    .layer 
-        .icon-btn 
+    .layer
+        .icon-btn
             margin: 0 13px
     /* TEAM */
     .team
         .container
-            .col-m-3 
-                width: 25% 
+            .col-m-3
+                width: 25%
                 margin: 30px 0 70px
     /* PROMOTION */
-    .promotion 
-        .container                  
+    .promotion
+        .container
             height: 320px
             padding: 25px 30px 25px 0px
             .col-m-5
-                .picture 
+                .picture
                     background-size: cover
                     +dimensions(300px, 300px)
-                    float: right           
+                    float: right
                     +pos-abs(28px, 65px)
-            p 
+            p
                 margin-right: 35px
     /* FOOTER */
-    footer 
-        .container 
+    footer
+        .container
             .row
-                &:nth-child(1) 
+                &:nth-child(1)
                     padding: 22px 50px 22px 96px
 /* For large computers: */
-@media (min-width: 1200px) 
+@media (min-width: 1200px)
     /* CONTAINER */
-    .container 
+    .container
         max-width: 1200px
     /* GRIDS */
     @for $i from 1 through 12
         .col-l-#{$i}
-            width: 100% / 12 * $i  
-    /* HEADER */                                       
+            width: 100% / 12 * $i
+    /* HEADER */
     header
-        .navbar-default 
-            padding: 0 120px 
+        .navbar-default
+            padding: 0 120px
             max-width: 1200px
-            margin: 0 auto      
+            margin: 0 auto
     /* HERO */
-    .hero 
+    .hero
         .container
-            .slogan 
+            .slogan
                 width: 535px
     /* BENEFITS */
     .benefits
         .container
-            .row 
-                width: 880px   
+            .row
+                width: 880px
                 .col-l-4
                     margin-bottom: 30px
-                    &:last-of-type 
+                    &:last-of-type
                         margin-bottom: 0
     /* FEATURED WORKS */
-    .featured_works 
-        h2 
+    .featured_works
+        h2
             margin-top: 25px
-        p                                            
+        p
             margin: 0 250px
     /* GALLERY */
-    .gallery .col-l-2,            
-    .gallery .col-l-4, 
+    .gallery .col-l-2,
+    .gallery .col-l-4,
     .gallery .col-l-2:hover .layer,
-    .gallery .col-l-4:hover .layer 
+    .gallery .col-l-4:hover .layer
         height: 150px
-    .gallery 
+    .gallery
         .container
-            .layer 
-                .icon-btn 
+            .layer
+                .icon-btn
                     margin: 0 18px
     /* TEAM */
-    .team 
-        .container 
+    .team
+        .container
             width: 944px
-            margin: 85px auto  
-            .col-l-3         
+            margin: 85px auto
+            .col-l-3
                 width: 200px
-                margin: 18px  
+                margin: 18px
     /* PROMOTION */
-    .promotion 
-        .container                 
+    .promotion
+        .container
             padding: 25px 130px
             .col-l-5
-                .picture 
+                .picture
                     +pos-abs(28px, 55px)
-            h2 
+            h2
                 font-size: 33px
-            p 
+            p
                 margin-right: 22px
                 font-size: 15px
     /* STATISTIC */
-    .statistic 
-        .container 
+    .statistic
+        .container
             padding: 58px 205px
     /* FOOTER */
-    footer 
-        .container 
+    footer
+        .container
             .row
-                &:nth-child(1) 
-                    padding: 22px 175px  
+                &:nth-child(1)
+                    padding: 22px 175px
                 h2
-                    &:after 
+                    &:after
                         width: 70px
