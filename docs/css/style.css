@@ -114,7 +114,7 @@ footer h2 {
 
 /* HERO */
 .hero .container {
-  background: url("https://unsplash.it/1200/400?image=180") repeat center/cover;
+  background: url("../img/bg.jpg") repeat center/cover;
   position: relative;
   height: 340px;
 }
@@ -246,19 +246,19 @@ footer h2 {
 }
 
 .team .container .col-x:nth-child(1) .person {
-  background: url("https://images.pexels.com/photos/428339/pexels-photo-428339.jpeg?h=350&auto=compress&cs=tinysrgb") repeat center/cover;
+  background: url("../img/man_1.jpg") repeat 50% 20%/cover;
 }
 
 .team .container .col-x:nth-child(2) .person {
-  background: url("https://images.pexels.com/photos/51969/model-female-girl-beautiful-51969.jpeg?h=350&auto=compress&cs=tinysrgb") repeat center/cover;
+  background: url("../img/woman_1.jpg") repeat center/cover;
 }
 
 .team .container .col-x:nth-child(3) .person {
-  background: url("https://images.pexels.com/photos/6980/summer-cute-hipster-beauty.jpg?h=350&auto=compress&cs=tinysrgb") repeat 50% 0%/cover;
+  background: url("../img/woman_2.jpg") repeat 50% 0%/cover;
 }
 
 .team .container .col-x:nth-child(4) .person {
-  background: url("https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?h=350&auto=compress&cs=tinysrgb") repeat center/cover;
+  background: url("../img/man_2.jpg") repeat center/cover;
 }
 
 .team .container .col-x .person {
@@ -308,7 +308,7 @@ footer h2 {
 .promotion .container .col-x .picture {
   height: 230px;
   width: 100%;
-  background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Avalanche_Hardline_Liquid_Cooled_Gaming_Computer.png/480px-Avalanche_Hardline_Liquid_Cooled_Gaming_Computer.png") no-repeat center/contain;
+  background: url("../img/computer.png") no-repeat center/contain;
 }
 
 .promotion .container .col-x p {
